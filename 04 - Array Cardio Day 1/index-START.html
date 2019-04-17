@@ -59,6 +59,9 @@
 
     // 7. sort Exercise
     // Sort the people alphabetically by last name
+    console.log(people.sort((a,b) => {
+      return a.split(",")[1][0] - b.split(",")[1][0]
+    }))
     
 
     // 8. Reduce Exercise
