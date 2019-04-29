@@ -78,6 +78,10 @@
       font-size: 40px;
     }
 
+    .panel.translate {
+      transform: translateY(0);
+    }
+
   </style>
 
 
@@ -122,13 +126,19 @@
     document.querySelectorAll("p:first-child").forEach(el => el.style.transform = "translateY(-100%)")
     document.querySelectorAll("p:last-child").forEach(el => el.style.transform = "translateY(100%)")
 
+    function toggleOpen() {
+      this.classList.toggle('open')
+    }
+
+    function translate() {
+      this.firstElementChild.classList.toggle('translate')
+      this.lastElementChild.classList.toggle('translate')
+    }
 
 
 
-    document.querySelectorAll(".panel").forEach(el => el.addEventListener("click", () => this.classList.toggle('open')))
-    // on("click", () => {
-    //   
-    // })
+    document.querySelectorAll(".panel").forEach(el => el.addEventListener("click", toggleOpen))
+    document.querySelectorAll(".panel").forEach(el => el.addEventListener("transitionend", translate))
 
 
   </script>
