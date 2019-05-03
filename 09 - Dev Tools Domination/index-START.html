@@ -19,27 +19,43 @@
 
     // Regular
 
+    console.log('hello')
     // Interpolated
 
+    console.log('hello i am a %s ', 'software engineer')
     // Styled
 
+    console.log('%c hello', 'font-size:20px')
+
     // warning!
+    console.warn('OH NOOOOOO')
 
     // Error :|
 
+    console.error('no!!!')
     // Info
-
+console.info('fun fact')
     // Testing
-
+console.assert(1 === 1, 'that is wrong')
     // clearing
+    console.clear()
 
     // Viewing DOM Elements
+    const p = document.querySelector('p');
+    console.log(p)
+    console.dir(p)
 
     // Grouping together
-
+dogs.forEach(dog => {
+  console.log(`This is ${dog.name}`)
+})
     // counting
 
+    console.count()
+
     // timing
+
+    console.time('fetching data')
 
   </script>
 </body>
