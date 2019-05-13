@@ -182,6 +182,13 @@
     </li>
   </ul>
 <script>
+  const time = Array.from(document.querySelectorAll('[data-time]')).map(li => li.dataset.time.split(":").map(parseFloat))
+  const seconds = time.reduce((acc, cur) => acc += cur[1] + cur[0] * 60, 0)
+  const hours = Math.floor(seconds / 3600)
+  const mins = Math.floor((seconds - 3600 * hours) / 60)
+  const second = seconds - mins * 60 - 3600 * hours
+  console.log(hours,mins, second)
+  
 </script>
 </body>
 </html>
